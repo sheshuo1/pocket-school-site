@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <title>青苗·口袋小学—官方网站</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<header>
+    <div class="box">
+        <img src="images/site-logo.png" alt="logo">
+        <nav>
+            <ul>
+                <li class="active"><a href="index.html">首页</a></li>
+                <li><a href="introduce.html">功能介绍</a></li>
+                <li><a href="about.html">关于</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main class="index-main">
+    <div class="index-cover">
+        <div class="box">
+            <p class="index-title">爱无距离<br><span>每天尽在弹指之间</span></p>
+            <div class="phone-img">
+                <img src="images/phone-1.png" alt="phone" class="phone-1">
+                <img src="images/phone-2.png" alt="phone" class="phone-2">
+                <img src="images/phone-3.png" alt="phone" class="phone-3">
+            </div>
+        </div>
+    </div>
+    <div class="index-download-card box">
+        <h1 class="index-download-title">
+            <img src="images/android-logo.png" alt="android-logo">
+            Android版
+        </h1>
+        <h2>青苗·口袋小学安卓客户端</h2>
+        <h3>青苗·口袋小学1.0版本<span>更新日期：2016年5月11日</span></h3>
+        <button class="btn-download">立即下载</button>
+        <div class="download-qrcode">
+            <img src="images/android-qr.jpg" alt="qr">
+            <p>安卓版二维码下载</p>
+        </div>
+    </div>
+    <div class="index-download-card box">
+        <h1 class="index-download-title">
+            <img src="images/iOS-logo.png" alt="iOS-logo">
+            iOS正式版
+        </h1>
+        <h2>青苗·口袋小学iPhone客户端</h2>
+        <h3>青苗·口袋小学1.0版本<span>更新日期：2016年5月11日</span></h3>
+        <button class="btn-download">立即下载</button>
+        <div class="download-qrcode">
+            <img src="images/iOS-qr.jpg" alt="qr">
+            <p>iPhone二维码下载</p>
+        </div>
+    </div>
+</main>
+<footer>
+    <p class="box">版权所有广西南宁优云网络科技公司    <span>联系电话：0771—5604240</span>      <span>地址：广西南宁市民主路13号歌舞剧院6栋</span></p>
+</footer>
+<script>
+function anime() {
+    document.querySelector('.index-title').classList.add('show');
+    document.querySelector('.phone-img').classList.add('bounceInDown');
+}
+
+window.addEventListener('load',anime);
+</script>
+</body>
+</html>
