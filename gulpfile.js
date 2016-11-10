@@ -48,7 +48,7 @@ gulp.task('autofx', function () {
             remove:true //是否去掉不必要的前缀 默认：true 
         }))
         .pipe(rename({ suffix: '.fx' }))
-        .pipe(gulp.dest(cssSrc));
+        .pipe(gulp.dest('dist/css'));
 });
 
 //自动编译less文件
@@ -66,7 +66,7 @@ gulp.task('imagemin', function() {
             progressive: true,
             use: [pngquant()] //使用pngquant深度压缩png图片的imagemin插件
         }))
-        .pipe(gulp.dest('src/images/min'));
+        .pipe(gulp.dest('dist/images/'));
 });
 
 //压缩js文件

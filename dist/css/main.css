@@ -42,6 +42,17 @@ button {
   font-weight: normal;
   font-style: normal;
 }
+@-webkit-keyframes show {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes show {
   0% {
     opacity: 0;
@@ -54,7 +65,40 @@ button {
   }
 }
 .show {
-  animation: show 2s;
+  -webkit-animation: show 2s;
+          animation: show 2s;
+}
+@-webkit-keyframes bounceInDown {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+  to {
+    -webkit-transform: none;
+    transform: none;
+  }
 }
 @keyframes bounceInDown {
   from,
@@ -96,6 +140,18 @@ button {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
+@-webkit-keyframes toLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(150px, 0, 0);
+    transform: translate3d(150px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
 @keyframes toLeft {
   from {
     opacity: 0;
@@ -117,6 +173,18 @@ button {
   animation-fill-mode: both;
   -webkit-animation-delay: 1.5s;
   animation-delay: 1.5s;
+}
+@-webkit-keyframes toRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-150px, 0, 0);
+    transform: translate3d(-150px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
 }
 @keyframes toRight {
   from {
@@ -187,7 +255,8 @@ aside {
   position: fixed;
   bottom: 50px;
   left: 50%;
-  transform: translate3d(500px, 0, 0);
+  -webkit-transform: translate3d(500px, 0, 0);
+          transform: translate3d(500px, 0, 0);
   background: rgba(0, 0, 0, 0.2);
   padding: 10px;
 }
@@ -343,10 +412,12 @@ aside img {
   color: #474646;
 }
 .introduce-main .introduce-box:nth-of-type(even) {
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .introduce-main .introduce-box:nth-of-type(even) section {
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .introduce-main .introduce-box h1 {
   font-size: 60px;
