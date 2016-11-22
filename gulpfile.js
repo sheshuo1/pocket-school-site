@@ -90,7 +90,7 @@ gulp.task('revCollectorCss', function () {
 
 //压缩css文件
 gulp.task('mincss',function() {
-    return gulp.src(cssRevSrc)
+    return gulp.src(cssSrc)
         .pipe(autoprefixer({
             browsers: ['last 2 versions', 'Android >= 4.0','> 5%'],
             cascade: true, //是否美化属性值 默认：true 像这样：
@@ -98,9 +98,9 @@ gulp.task('mincss',function() {
         }))
         .pipe(minifyCSS({compatibility: 'ie8'}))
         //.pipe(rename({ suffix: '.min' }))
-        .pipe(rev())
-        .pipe(gulp.dest(cssDest))
-        .pipe(rev.manifest())
+        // .pipe(rev())
+        // .pipe(gulp.dest(cssDest))
+        // .pipe(rev.manifest())
         .pipe(gulp.dest('src/rev/css'));
 });
 
