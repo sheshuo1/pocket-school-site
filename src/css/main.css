@@ -195,6 +195,7 @@ aside img {
   width: 100%;
 }
 .index-main .index-cover {
+  overflow: hidden;
   height: 786px;
   background: #40a858 url("../images/bg.png") center center;
   background-size: cover;
